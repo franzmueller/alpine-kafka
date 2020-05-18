@@ -1,11 +1,10 @@
 FROM rawmind/alpine-jvm8:1.8.181-1
-MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 # Set environment
 ENV SERVICE_HOME=/opt/kafka \
     SERVICE_NAME=kafka \
     SCALA_VERSION=2.12 \
-    SERVICE_VERSION=1.1.0 \
+    SERVICE_VERSION=2.4.0 \
     SERVICE_USER=kafka \
     SERVICE_UID=10003 \
     SERVICE_GROUP=kafka \
