@@ -33,3 +33,8 @@ USER $SERVICE_USER
 WORKDIR $SERVICE_HOME
 
 EXPOSE 9092
+
+RUN echo "/opt/tools/confd/bin/service-conf.sh start" > tmp.sh
+RUN cat /opt/monit/bin/monit-start.sh >> tmp.sh
+RUN mv tmp.sh /opt/monit/bin/monit-start.sh
+RUN chmod 755 /opt/monit/bin/monit-start.sh
